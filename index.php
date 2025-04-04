@@ -10,21 +10,24 @@
 <body>
     <header>
         <div id="logo">
+            <a href="index.php">
+                <img src="image/logo.jpg" alt="logo">
+                <p>Lakaka.land</p>
+            </a>
 
-        <p>Lakaka.land</p>
         </div>
-        <a href="pages/ajout.html">
+        <a href="pages/ajout.php">
             <img src="assets/add.ico" alt="ajouter">
         </a>
-        <a href="credits.html">
+        <a href="credits.php">
             <img src="../assets/connexion.svg" alt="Crédits">
         </a>
-        <a href="connexion.html">
+        <a href="connexion.php">
             <img src="assets/" alt="connexion">
         </a>
 
     </header>
-    /Applications/MAMP/htdocs/current
+
     <nav>
         <form action="pages/recherche.php" method="post">
             <input type="text" name="" maxlength="100" placeholder="cherche">
