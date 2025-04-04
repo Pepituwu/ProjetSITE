@@ -1,0 +1,51 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+header {
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+    padding: 1em;
+}
+
+nav {
+    width: 20%;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
+}
+
+main article {
+    width: 30%;
+    margin: 1.33%;
+}
+
+aside {
+    display: flex;
+    flex-wrap: wrap;
+    width: 20%;
+}
+
+aside article {
+    width: 95%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2.5%;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
