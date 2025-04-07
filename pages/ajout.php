@@ -10,18 +10,19 @@
 <body>
     <header>
         <div id="logo">
-            <a href="../index.php">
+            <a href="index.php">
                 <img src="image/logo.jpg" alt="logo">
                 <p>Lakaka.land</p>
             </a>
+
         </div>
-        <a href="pages/ajout.html">
+        <a href="pages/ajout.php">
             <img src="assets/add.ico" alt="ajouter">
         </a>
-        <a href="credits.html">
+        <a href="credits.php">
             <img src="../assets/connexion.svg" alt="Crédits">
         </a>
-        <a href="connexion.html">
+        <a href="connexion.php">
             <img src="assets/" alt="connexion">
         </a>
 
@@ -29,36 +30,30 @@
 
     <nav>
         <form action="pages/recherche.php" method="post">
-            <input type="text" name="search" maxlength="100" placeholder="Chercher...">
+            <input type="text" name="search" maxlength="100" placeholder="Cherche...">
             <input type="submit">
         </form>
     </nav>
 
     <main>
-        <img src="../image/exemple.jpg" alt="image article">
-        <div id="description">
-            <h1>
-                TITRE
-            </h1>
-
-            <h2 id="prix">Prix : </h2>
-
-            <form action="../post/buy.php" method="post">
-                <input type="number" placeholder="Faire une offre..." name="buy" id="buy">€
-                <input type="submit">
-            </form>
-            <p>
-                Description : <br>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia, cupiditate quos voluptate accusantium quas totam. Voluptas, illo. Ipsam voluptate cupiditate fugit accusantium assumenda, dolores iure cumque, nam, aliquam impedit architecto?
-            </p>
-        </div>
+        <form action="pages/add.php" method="post">
+            <input type="file" name="image">
+            <br>
+            <input type="text" name="title" maxlength="100" placeholder="Titre">
+            <br>
+            <input type="text" name="describe" maxlength="1000" placeholder="Description">
+            <br>
+            <input type="submit">
+        </form>
     </main>
+
     <aside>
         <article>
             <img src="assets/exemple.jpg" alt="exemple">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus inventore et nesciunt ipsa maxime omnis a cum fugiat dicta saepe excepturi officia error asperiores at, enim voluptatum blanditiis alias officiis!</p>
-    </article>
+        </article>
     </aside>
+
     <footer>
         <p>copyright 2025</p>
     </footer>

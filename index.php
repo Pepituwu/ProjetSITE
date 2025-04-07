@@ -30,24 +30,30 @@
 
     <nav>
         <form action="pages/recherche.php" method="post">
-            <input type="text" name="" maxlength="100" placeholder="cherche">
+            <input type="text" name="search" maxlength="100" placeholder="cherche">
             <input type="submit">
         </form>
     </nav>
 
     <main>
-        <article>
-            <img src="assets/exemple.jpg" alt="exemple">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus inventore et nesciunt ipsa maxime omnis a cum fugiat dicta saepe excepturi officia error asperiores at, enim voluptatum blanditiis alias officiis!</p>
-        </article>
-        <article>
-            <img src="assets/exemple.jpg" alt="exemple">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus inventore et nesciunt ipsa maxime omnis a cum fugiat dicta saepe excepturi officia error asperiores at, enim voluptatum blanditiis alias officiis!</p>
-        </article>
-        <article>
-            <img src="assets/exemple.jpg" alt="exemple">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus inventore et nesciunt ipsa maxime omnis a cum fugiat dicta saepe excepturi officia error asperiores at, enim voluptatum blanditiis alias officiis!</p>
-        </article>
+        <a href="pages/article.php">
+            <article>
+                <img src="assets/exemple.jpg" alt="exemple">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus inventore et nesciunt ipsa maxime omnis a cum fugiat dicta saepe excepturi officia error asperiores at, enim voluptatum blanditiis alias officiis!</p>
+            </article>
+        </a>
+        <a href="pages/article.php">
+            <article>
+                <img src="assets/exemple.jpg" alt="exemple">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus inventore et nesciunt ipsa maxime omnis a cum fugiat dicta saepe excepturi officia error asperiores at, enim voluptatum blanditiis alias officiis!</p>
+            </article>
+        </a>
+        <a href="pages/article.php">
+            <article>
+                <img src="assets/exemple.jpg" alt="exemple">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus inventore et nesciunt ipsa maxime omnis a cum fugiat dicta saepe excepturi officia error asperiores at, enim voluptatum blanditiis alias officiis!</p>
+            </article>
+        </a>
     </main>
 
     <aside>
