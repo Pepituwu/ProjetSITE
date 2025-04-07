@@ -36,7 +36,7 @@
     </nav>
 
     <main>
-        <form action="pages/add_article.php" method="post">
+        <form action="pages/add_credits.php" method="post">
             <input type="file" name="image">
             <br>
             <input type="text" name="title" maxlength="100" placeholder="Titre">
