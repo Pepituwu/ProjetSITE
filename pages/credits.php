@@ -48,10 +48,24 @@
     </main>
 
     <aside>
+        <?php 
+        $sql = "SELECT * FROM Article WHERE Sponsorisé = 1";
+        $articles = $key->query($sql);
+
+        foreach($articles AS $r): ?>
         <article>
-            <img src="assets/exemple.jpg" alt="exemple">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus inventore et nesciunt ipsa maxime omnis a cum fugiat dicta saepe excepturi officia error asperiores at, enim voluptatum blanditiis alias officiis!</p>
+            <img src="<?= $r['Image']?>" alt="Article <?= $r['Id']?>">
+                <h2>
+                    <?= $r['Titre']?>
+                </h2>
+                <h3>
+                    Prix : <?= $r['Prix']?>
+                </h3>
+                <p>
+                    <?= $r['Description'] ?>
+                </p>
         </article>
+        <?php endforeach; ?>
     </aside>
 
     <footer>
