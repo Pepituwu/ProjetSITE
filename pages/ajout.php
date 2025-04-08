@@ -10,61 +10,68 @@
 <body>
     <header>
         <div id="logo">
-            <a href="index.php">
+            <a href="../index.php">
                 <img src="image/logo.jpg" alt="logo">
                 <p>Lakaka.land</p>
             </a>
 
         </div>
-        <a href="pages/ajout.php">
-            <img src="assets/add.ico" alt="ajouter">
+        <a href="ajout.php">
+            <img src="../assets/add.ico" alt="ajouter">
         </a>
         <a href="credits.php">
             <img src="../assets/connexion.svg" alt="Crédits">
         </a>
-        <a href="connexion.php">
+        <a href="../connexion.php">
             <img src="assets/" alt="connexion">
         </a>
 
     </header>
 
     <nav>
-        <form action="pages/recherche.php" method="post">
+        <form action="pages/recherche.php" method="post" enctype="multipart/form-data">
             <input type="text" name="search" maxlength="100" placeholder="Cherche...">
             <input type="submit">
         </form>
     </nav>
 
     <main>
-        <form action="pages/add_article.php" method="post">
+        <form action="../post/add_article.php" method="post" enctype="multipart/form-data">
             <input type="file" name="image">
             <br>
             <input type="text" name="title" maxlength="100" placeholder="Titre">
+            <input type="number" name="price" placeholder="Prix...">
             <br>
             <input type="text" name="describe" maxlength="1000" placeholder="Description">
             <br>
+            <input type="checkbox" name="sponso" value = 1>
             <input type="submit">
         </form>
     </main>
 
     <aside>
         <?php 
+        
         $sql = "SELECT * FROM Article WHERE Sponsorisé = 1";
+        include '../post/key.php';
+        
         $articles = $key->query($sql);
-
+        
         foreach($articles AS $r): ?>
-        <article>
-            <img src="<?= $r['Image']?>" alt="Article <?= $r['Id']?>">
-                <h2>
-                    <?= $r['Titre']?>
-                </h2>
-                <h3>
-                    Prix : <?= $r['Prix']?>
-                </h3>
-                <p>
-                    <?= $r['Description'] ?>
-                </p>
-        </article>
+        <a href = article.php>
+            <article>
+                <img src="../<?= $r['Image']?>" alt="Article <?= $r['Id']?>">
+                    <h2>
+                        <?= $r['Titre']?>
+                    </h2>
+                    <h3>
+                        Prix : <?= $r['Prix']?>
+                    </h3>
+                    <p>
+                        <?= $r['Description'] ?>
+                    </p>
+            </article>
+        </a>
         <?php endforeach; ?>
     </aside>
     </aside>

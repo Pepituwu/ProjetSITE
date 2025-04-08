@@ -15,13 +15,13 @@
                 <p>Lakaka.land</p>
             </a>
         </div>
-        <a href="pages/ajout.html">
-            <img src="assets/add.ico" alt="ajouter">
+        <a href="ajout.php">
+            <img src="assets/add.ico" alt="Ajouter">
         </a>
-        <a href="credits.html">
+        <a href="credits.php">
             <img src="../assets/connexion.svg" alt="Crédits">
         </a>
-        <a href="connexion.html">
+        <a href="connexion.php">
             <img src="assets/" alt="connexion">
         </a>
 
@@ -60,7 +60,7 @@
 
         foreach($articles AS $r): ?>
         <article>
-            <img src="<?= $r['Image']?>" alt="Article <?= $r['Id']?>">
+            <img src="../<?= $r['Image']?>" alt="Article <?= $r['Id']?>">
                 <h2>
                     <?= $r['Titre']?>
                 </h2>

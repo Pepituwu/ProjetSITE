@@ -70,18 +70,20 @@
         $articles = $key->query($sql);
 
         foreach($articles AS $r): ?>
-        <article>
-            <img src="<?= $r['Image']?>" alt="Article <?= $r['Id']?>">
-                <h2>
-                    <?= $r['Titre']?>
-                </h2>
-                <h3>
-                    Prix : <?= $r['Prix']?>
-                </h3>
-                <p>
-                    <?= $r['Description'] ?>
-                </p>
-        </article>
+        <a href="pages/article.php">
+            <article>
+                <img src="<?= $r['Image']?>" alt="Article <?= $r['Id']?>">
+                    <h2>
+                        <?= $r['Titre']?>
+                    </h2>
+                    <h3>
+                        Prix : <?= $r['Prix']?>
+                    </h3>
+                    <p>
+                        <?= $r['Description'] ?>
+                    </p>
+            </article>
+        </a>
         <?php endforeach; ?>
     </aside>
 
