@@ -11,6 +11,7 @@ include "../incr/nav.php";?>
             <br>
             <input type="text" name="describe" maxlength="1000" placeholder="Description">
             <br>
+            <p>Sponsorisé ?</p>
             <input type="checkbox" name="sponso" value = 1>
             <input type="submit">
         </form>

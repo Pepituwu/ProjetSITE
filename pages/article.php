@@ -3,13 +3,24 @@ include "../incr/header.php";
 include "../incr/nav.php";?>
 
     <main>
-        <img src="../image/exemple.jpg" alt="image article">
+
+    <?php
+    // j'ai besoin de l'id du produit à afficher
+    $id = $_GET['article'];
+    require_once "../post/key.php";
+    $sql = "SELECT * FROM Article WHERE Id=$id";
+    // var_dump($sql);
+    $article = $key->query($sql);
+    
+    foreach($article as $r):
+    ?>
+        <img src="../<?= $r['Image']?>" alt="image article">
         <div id="description">
             <h1>
-                TITRE
+                <?= $r['Titre'];?>
             </h1>
 
-            <h2 id="prix">Prix : </h2>
+            <h2 id="prix">Prix : <?= $r['Prix'];?></h2>
 
             <form action="../post/buy.php" method="post">
                 <input type="number" placeholder="Faire une offre..." name="buy" id="buy">€
@@ -17,12 +28,16 @@ include "../incr/nav.php";?>
             </form>
             <p>
                 Description : <br>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia, cupiditate quos voluptate accusantium quas totam. Voluptas, illo. Ipsam voluptate cupiditate fugit accusantium assumenda, dolores iure cumque, nam, aliquam impedit architecto?
+                <?= $r['Description'];?>
             </p>
         </div>
+    <?php 
+        endforeach;
+    ?>
     </main>
     
-    <?php include "../incr/aside.php";
+    <?php 
+    include "../incr/aside.php";
     include "../incr/footer.php";?>
 </body>
 </html>

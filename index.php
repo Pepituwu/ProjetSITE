@@ -45,9 +45,9 @@
         foreach($articles AS $r): ?>
 
 
-        <a href="pages/article.php">
+        <a href="pages/article.php?article=<?= $r['Id']?>">
             <article>
-                <img src="<?= $r['Image']?>" alt="Article <?= $r['Id']?>">
+                    <img src="<?= $r['Image']?>" alt="Article <?= $r['Id']?>">
                 <h2>
                     <?= $r['Titre']?>
                 </h2>
@@ -70,7 +70,7 @@
         $articles = $key->query($sql);
 
         foreach($articles AS $r): ?>
-        <a href="pages/article.php">
+        <a href="pages/article.php?article=<?= $r['Id']?>">
             <article>
                 <img src="<?= $r['Image']?>" alt="Article <?= $r['Id']?>">
                     <h2>

@@ -1,9 +1,15 @@
-<!-- connexion -->
 <?php
+if (!defined('SERVER')){
+    define('SERVER', 'mysql:server=localhost;dbname=lakaka');
+}
+if (!defined('LOGIN')){
+    define('LOGIN', 'root');
+}
+if (!defined('PASSWORD')){
+    define('PASSWORD', 'root'); //laisser vide pour les utilisateurs de wamp
+}
 
-define('SERVER', 'mysql:server=localhost;dbname=lakaka');
-define('LOGIN', 'root');
-define('PASSWORD', 'root'); //laisser vide pour les utilisateurs de wamp
+
 try{
     $key = new PDO(SERVER, LOGIN, PASSWORD);
 }catch(Exception $e){

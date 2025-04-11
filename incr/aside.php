@@ -7,7 +7,7 @@
         $articles = $key->query($sql);
         
         foreach($articles AS $r): ?>
-        <a href = article.php>
+        <a href = "article.php?article=<?= $r['Id']?>">
             <article>
                 <img src="../<?= $r['Image']?>" alt="Article <?= $r['Id']?>">
                     <h2>
