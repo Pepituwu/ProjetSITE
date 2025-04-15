@@ -20,7 +20,7 @@ include "../incr/nav.php";?>
                 <?= $r['Titre'];?>
             </h1>
 
-            <h2 id="prix">Prix : <?= $r['Prix'];?></h2>
+            <h2 id="prix">Prix : <?= $r['Prix'];?> €</h2>
 
             <form action="../post/buy.php" method="post">
                 <input type="number" placeholder="Faire une offre..." name="buy" id="buy">€

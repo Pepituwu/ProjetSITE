@@ -14,7 +14,7 @@
                         <?= $r['Titre']?>
                     </h2>
                     <h3>
-                        Prix : <?= $r['Prix']?>
+                        Prix : <?= $r['Prix']?> €
                     </h3>
                     <p>
                         <?= $r['Description'] ?>

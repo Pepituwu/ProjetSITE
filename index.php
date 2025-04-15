@@ -19,10 +19,10 @@
         <a href="pages/ajout.php">
             <img src="assets/add.ico" alt="ajouter">
         </a>
-        <a href="credits.php">
+        <a href="pages/credits.php">
             <img src="../assets/connexion.svg" alt="Crédits">
         </a>
-        <a href="connexion.php">
+        <a href="pages/connexion.php">
             <img src="assets/" alt="connexion">
         </a>
 
@@ -52,7 +52,7 @@
                     <?= $r['Titre']?>
                 </h2>
                 <h3>
-                    Prix : <?= $r['Prix']?>
+                    Prix : <?= $r['Prix']?> €
                 </h3>
                 <p>
                     <?= $r['Description'] ?>
@@ -77,7 +77,7 @@
                         <?= $r['Titre']?>
                     </h2>
                     <h3>
-                        Prix : <?= $r['Prix']?>
+                        Prix : <?= $r['Prix']?> €
                     </h3>
                     <p>
                         <?= $r['Description'] ?>

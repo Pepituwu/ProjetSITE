@@ -4,11 +4,7 @@ include "../incr/nav.php";?>
 
     <main>
         <form action="pages/add_credits.php" method="post">
-            <input type="file" name="image">
-            <br>
-            <input type="text" name="title" maxlength="100" placeholder="Titre">
-            <br>
-            <input type="text" name="describe" maxlength="1000" placeholder="Description">
+            <input type="number" name="add" maxlength="100" placeholder="Crédits à rajouter...">
             <br>
             <input type="submit">
         </form>
