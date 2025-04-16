@@ -11,9 +11,10 @@ include "../incr/nav.php";?>
             <br>
             <input type="text" name="describe" maxlength="1000" placeholder="Description">
             <br>
-            <p>Sponsorisé ?</p>
+             Sponsorisé ?
             <input type="checkbox" name="sponso" value = 1>
-            <input type="submit">
+            <br>
+            <input type="image" src="../assets/envo.svg" alt="envoyer" width="6%" id="envoyé">
         </form>
     </main>
 
