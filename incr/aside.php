@@ -10,7 +10,8 @@
         <a href = "article.php?article=<?= $r['Id']?>">
             <article>
                 <img src="../<?= $r['Image']?>" alt="Article <?= $r['Id']?>">
-                    <h2>
+                <div id="infos">   
+                <h2>
                         <?= $r['Titre']?>
                     </h2>
                     <h3>
@@ -19,6 +20,7 @@
                     <p>
                         <?= $r['Description'] ?>
                     </p>
+                </div> 
             </article>
         </a>
         <?php endforeach; ?>
