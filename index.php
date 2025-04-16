@@ -12,20 +12,23 @@
         <div id="logo">
             <a href="index.php">
                 <img src="image/logo.jpg" alt="logo" width="12%">
-                <p>Lakaka.land</p>
             </a>
-
+            
         </div>
-        <div id="droites"> </div>
-        <a href="pages/ajout.php">
-            <img src="assets/add.svg" alt="ajouter" id="icones"width="12%">
+        <a href="index.php">
+            <p>Lakaka.land</p>
         </a>
-        <a href="pages/credits.php">
-            <img src="assets/euro.svg" alt="Crédits"id="icones"width="12%">
-        </a>
-        <a href="pages/connexion.php">
-            <img src="assets/connexion.svg" alt="connexion"id="icones"width="12%">
-        </a>
+        <div id="droites">
+            <a href="pages/ajout.php">
+                <img src="assets/add.svg" alt="ajouter" id="icones"width="12%">
+            </a>
+            <a href="pages/credits.php">
+                <img src="assets/euro.svg" alt="Crédits"id="icones"width="12%">
+            </a>
+            <a href="pages/connexion.php">
+                <img src="assets/connexion.svg" alt="connexion"id="icones"width="12%">
+            </a>
+        </div>
        
 
     </header>
@@ -36,11 +39,15 @@
             <input type="image" src="assets/cherche.svg" alt="rechercher" width="11%" id="loupe">
         </form>
         <h2>
-        <br> La malice 
-        <br> La bienveillance 
-        <br> La malveillance
-        <br> Goupi land
-        <br> Le garage 
+        <a href="index.php?theme=malice">La malice</a>
+        <br> 
+        <a href="index.php?theme=bien">La bienveillance</a> 
+        <br> 
+        <a href="index.php?theme=mal">La malveillance</a>
+        <br> 
+        <a href="index.php?theme=goupi">Goupi land</a>
+        <br> 
+        <a href="index.php?theme=garage">Le garage</a> 
         </h2>
     </nav>
 
