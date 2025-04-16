@@ -15,9 +15,28 @@ header {
     padding: 10px 20px;
     background-color: #b3f7b9;
 }
-#logo{
-    flex: 1;
+
+header a {
+    text-decoration: none;
 }
+
+#logo {
+    display: flex;
+    flex-wrap: wrap;
+    width: 10%;
+}
+
+#logo a {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-decoration: none;
+}
+
+#logo img {
+    width: 40%;
+}
+
 #droites {
     display: flex;
     align-items: center;
@@ -40,7 +59,11 @@ nav {
     width: 18%;
     background-color: #FFE0B5;
     padding-left: 2%;
+}
 
+nav a {
+    text-decoration: none;
+    color: black;
 }
 
 #loupe{
@@ -57,6 +80,7 @@ main a {
     margin: 0%;
     text-decoration: none;
 }
+
 main article {
     width: 98%;
     margin: 1%;
@@ -91,6 +115,7 @@ aside {
 aside a {
     text-decoration: none;
 }
+
 aside article {
     width: 95%;
     display: flex;
