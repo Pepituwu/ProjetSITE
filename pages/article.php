@@ -8,7 +8,7 @@ include "../incr/nav.php";?>
     // j'ai besoin de l'id du produit à afficher
     $id = $_GET['article'];
     require_once "../post/key.php";
-    $sql = "SELECT * FROM article WHERE Id=$id";
+    $sql = "SELECT * FROM article WHERE id=$id";
     // var_dump($sql);
     $article = $key->query($sql);
     

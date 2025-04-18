@@ -10,9 +10,9 @@
         $articles = $key->query($sql);
         
         foreach($articles AS $r): ?>
-        <a href = "article.php?article=<?= $r['Id']?>">
+        <a href = "article.php?article=<?= $r['id']?>">
             <article>
-                <img src="../<?= $r['image']?>" alt="Article <?= $r['Id']?>">
+                <img src="../<?= $r['image']?>" alt="Article <?= $r['id']?>">
                 <div id="infos">   
                 <h2>
                         <?= $r['titre']?>
