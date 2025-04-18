@@ -8,19 +8,19 @@ include "../incr/nav.php";?>
     // j'ai besoin de l'id du produit à afficher
     $id = $_GET['article'];
     require_once "../post/key.php";
-    $sql = "SELECT * FROM Article WHERE Id=$id";
+    $sql = "SELECT * FROM article WHERE Id=$id";
     // var_dump($sql);
     $article = $key->query($sql);
     
     foreach($article as $r):
     ?>
-        <img src="../<?= $r['Image']?>" alt="image article">
+        <img src="../<?= $r['image']?>" alt="image article">
         <div id="description">
             <h1>
-                <?= $r['Titre'];?>
+                <?= $r['titre'];?>
             </h1>
 
-            <h2 id="prix">Prix : <?= $r['Prix'];?> €</h2>
+            <h2 id="prix">Prix : <?= $r['prix'];?> €</h2>
 
             <form action="../post/buy.php" method="post">
                 <input type="number" placeholder="Faire une offre..." name="buy" id="buy">€
@@ -28,7 +28,7 @@ include "../incr/nav.php";?>
             </form>
             <p>
                 Description : <br>
-                <?= $r['Description'];?>
+                <?= $r['description'];?>
             </p>
         </div>
     <?php 

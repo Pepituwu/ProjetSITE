@@ -7,8 +7,8 @@ if (isset($_POST['title']) && !empty($_POST['title'])):
     $price = isset($_POST['price']) && is_numeric($_POST['price']) ? (int)$_POST['price'] : 0;
     $sponso = isset($_POST['sponso']) ? 1 : 0;
     $theme = isset($_POST['theme']) ? (int)$_POST['theme'] : 0;
-    
-    $sql = "INSERT INTO Article (Titre, Description, Prix, Sponsorisé, Image, theme) 
+
+    $sql = "INSERT INTO article (titre, description, prix, sponsorise, image, theme) 
             VALUES (:title, :describe, :price, :sponso, '', :theme)";
     $stmt = $key->prepare($sql);
     $stmt->execute([
@@ -37,7 +37,7 @@ if (isset($_POST['title']) && !empty($_POST['title'])):
         }
 
         if (move_uploaded_file($tempName, '../' . $targetPath)) {
-            $updateSql = "UPDATE Article SET Image = :image WHERE id = :id";
+            $updateSql = "UPDATE article SET image = :image WHERE id = :id";
             $updateStmt = $key->prepare($updateSql);
             $updateStmt->execute([
                 ':image' => $targetPath,

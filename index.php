@@ -58,14 +58,14 @@
         include 'post/key.php';
         if (!empty($_GET['name'])) {
             $nom = $_GET['name']; 
-            $sql = "SELECT * FROM Article WHERE Titre = " . $key->quote($nom); //
+            $sql = "SELECT * FROM article WHERE titre = " . $key->quote($nom); //
 
         } elseif (!empty($_GET['theme'])) {
             $theme = $_GET['theme'];
-            $sql = "SELECT * FROM Article WHERE theme = " . $key->quote($theme);
+            $sql = "SELECT * FROM article WHERE theme = " . $key->quote($theme);
 
         } else {
-            $sql = "SELECT * FROM Article";
+            $sql = "SELECT * FROM article";
         }
         
 
@@ -76,13 +76,13 @@
 
         <a href="pages/article.php?article=<?= $r['Id']?>">
             <article>
-                    <img src="<?= $r['Image']?>" alt="Article <?= $r['Id']?>">
+                    <img src="<?= $r['image']?>" alt="Article <?= $r['Id']?>">
                     <div id="infos">
                     <h2>
-                    <?= $r['Titre']?>
+                    <?= $r['titre']?>
                 </h2>
                 <h3>
-                    Prix : <?= $r['Prix']?> €
+                    Prix : <?= $r['prix']?> €
                 </h3>
                 </div>
             </article>
@@ -97,22 +97,22 @@
             Articles Sponsorisés
         </h1>
     <?php 
-        $sql = "SELECT * FROM Article WHERE Sponsorisé = 1";
+        $sql = "SELECT * FROM article WHERE sponsorise = 1";
         $articles = $key->query($sql);
 
         foreach($articles AS $r): ?>
         <a href="pages/article.php?article=<?= $r['Id']?>">
             <article>
-                <img src="<?= $r['Image']?>" alt="Article <?= $r['Id']?>">
+                <img src="<?= $r['image']?>" alt="Article <?= $r['Id']?>">
                 <div id="infos">
                     <h2>
-                        <?= $r['Titre']?>
+                        <?= $r['titre']?>
                     </h2>
                     <h3>
-                        Prix : <?= $r['Prix']?> €
+                        Prix : <?= $r['prix']?> €
                     </h3>
                     <p>
-                        Description : <?= $r['Description']?>
+                        Description : <?= $r['description']?>
                     </p>
                 </div>
             </article>
