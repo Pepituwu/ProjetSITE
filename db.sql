@@ -3,10 +3,11 @@ use lakaka ;
 
 CREATE TABLE article(
     id int AUTO_INCREMENT PRIMARY KEY ,
-    description varchar(200) ,
-    prix int ,
+    titre varchar(100),
+    description varchar(200),
+    prix int,
     image varchar(200),
-    titre varchar(100) ,
+    theme int,
     sponsorise boolean
 );
 
@@ -14,5 +15,9 @@ CREATE TABLE usr(
     id int AUTO_INCREMENT PRIMARY KEY ,
     pseudo varchar(25), 
     mdp varchar(50) ,
-    crédits int 
+    credits int 
 );
+
+INSERT INTO `article`(`titre`, `description`, `prix`, `image`, `theme`, `sponsorise`) 
+VALUES 
+(,'','','','','','')
