@@ -1,4 +1,7 @@
 <aside>
+    <h1>
+        Articles Sponsorisés
+    </h1>
         <?php 
         
         $sql = "SELECT * FROM Article WHERE Sponsorisé = 1";

@@ -15,9 +15,11 @@
             </a>
             
         </div>
+
         <a href="index.php">
             <p>Lakaka.land</p>
         </a>
+
         <div id="droites">
             <a href="pages/ajout.php">
                 <img src="assets/add.svg" alt="ajouter" id="icones"width="12%">
@@ -34,28 +36,39 @@
     </header>
 
     <nav>
-        <form action="pages/recherche.php" method="post">
-            <input type="text" name="search" maxlength="100" placeholder="Recherche">
-            <input type="image" src="assets/cherche.svg" alt="rechercher" width="11%" id="loupe">
+        <form action="index.php" method="get">
+            <input type="text" name="name" maxlength="100" placeholder="Recherche" id="search">
+            <input type="image" src="assets/cherche.svg" alt="rechercher" id="loupe">
         </form>
         <h2>
-        <a href="index.php?theme=malice">La malice</a>
+        <a href="index.php?theme=1">La Malice</a>
         <br> 
-        <a href="index.php?theme=bien">La bienveillance</a> 
+        <a href="index.php?theme=2">La Bienveillance</a> 
         <br> 
-        <a href="index.php?theme=mal">La malveillance</a>
+        <a href="index.php?theme=3">La Malveillance</a>
         <br> 
-        <a href="index.php?theme=goupi">Goupi land</a>
+        <a href="index.php?theme=4">Goupi Land</a>
         <br> 
-        <a href="index.php?theme=garage">Le garage</a> 
+        <a href="index.php?theme=5">Le Garage</a> 
         </h2>
     </nav>
 
     <main>
         <?php 
-        $sql = "SELECT * FROM Article";
-
         include 'post/key.php';
+        if (!empty($_GET['name'])) {
+            $nom = $_GET['name']; 
+            $sql = "SELECT * FROM Article WHERE Titre = " . $key->quote($nom); //
+
+        } elseif (!empty($_GET['theme'])) {
+            $theme = $_GET['theme'];
+            $sql = "SELECT * FROM Article WHERE theme = " . $key->quote($theme);
+
+        } else {
+            $sql = "SELECT * FROM Article";
+        }
+        
+
         $articles = $key->query($sql);
 
         foreach($articles AS $r): ?>
@@ -80,6 +93,9 @@
     </main>
 
     <aside>
+        <h1>
+            Articles Sponsorisés
+        </h1>
     <?php 
         $sql = "SELECT * FROM Article WHERE Sponsorisé = 1";
         $articles = $key->query($sql);
@@ -95,6 +111,9 @@
                     <h3>
                         Prix : <?= $r['Prix']?> €
                     </h3>
+                    <p>
+                        Description : <?= $r['Description']?>
+                    </p>
                 </div>
             </article>
         </a>

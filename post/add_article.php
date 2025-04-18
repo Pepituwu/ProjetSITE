@@ -6,15 +6,17 @@ if (isset($_POST['title']) && !empty($_POST['title'])):
     $describe = htmlspecialchars($_POST['describe']);
     $price = isset($_POST['price']) && is_numeric($_POST['price']) ? (int)$_POST['price'] : 0;
     $sponso = isset($_POST['sponso']) ? 1 : 0;
-
-    $sql = "INSERT INTO Article (Titre, Description, Prix, Sponsorisé, Image) 
-            VALUES (:title, :describe, :price, :sponso, '')";
+    $theme = isset($_POST['theme']) ? (int)$_POST['theme'] : 0;
+    
+    $sql = "INSERT INTO Article (Titre, Description, Prix, Sponsorisé, Image, theme) 
+            VALUES (:title, :describe, :price, :sponso, '', :theme)";
     $stmt = $key->prepare($sql);
     $stmt->execute([
         ':title' => $title,
         ':describe' => $describe,
         ':price' => $price,
-        ':sponso' => $sponso
+        ':sponso' => $sponso,
+        ':theme' => $theme
     ]);
 
     $articleId = $key->lastInsertId();
