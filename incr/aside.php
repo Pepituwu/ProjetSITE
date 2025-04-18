@@ -4,7 +4,7 @@
     </h1>
         <?php 
         
-        $sql = "SELECT * FROM article WHERE Sponsorisé = 1";
+        $sql = "SELECT * FROM article WHERE sponsorise = 1";
         include '../post/key.php';
         
         $articles = $key->query($sql);
